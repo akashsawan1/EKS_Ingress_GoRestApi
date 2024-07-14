@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: go-api-deployment-route4
+  namespace: route4
+spec:
+  selector:
+    matchLabels:
+      app: go-route4
+  replicas: 2 
+  template:
+    metadata:
+      labels:
+        app: go-route4
+    spec:
+      containers:
+      - name: go-rest-route4
+        image: akashsawan/wrongtry
+        ports:
+        - containerPort: 8080

@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: go-route4-service
+  namespace: route3
+  labels :
+    app: route4
+spec:
+  selector:
+    app: go-route4
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+  type: NodePort

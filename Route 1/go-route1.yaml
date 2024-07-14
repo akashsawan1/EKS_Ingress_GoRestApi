@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: go-api-deployment-route1
+  namespace: route1
+spec:
+  selector:
+    matchLabels:
+      app: go-route1
+  replicas: 2 
+  template:
+    metadata:
+      labels:
+        app: go-route1
+    spec:
+      containers:
+      - name: go-rest-route1
+        image: akashsawan/route1
+        ports:
+        - containerPort: 8080

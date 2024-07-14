@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: route1
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: route2
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: route3
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: route4
